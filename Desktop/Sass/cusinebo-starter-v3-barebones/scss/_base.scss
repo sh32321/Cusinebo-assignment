@@ -1,0 +1,83 @@
+// variables, mixins, placeholder, root, *, body , html
+$color-primary:#FFC100;
+$color-seconary:grey;
+$color-teritary:#343431;
+
+$font-lg:50px;
+$font-md:30px;
+$font-sm:20px;
+
+$font-family1:monospace;
+$font-family2: sans-serif;
+$font-family3:'Kaushan Script', cursive;
+
+@mixin headerStyle {
+    font-size: $font-lg;
+    color: $color-primary;
+    font-family: $font-family3;
+    
+}
+
+@mixin mainNameStyle {
+    color:$color-seconary;
+    font-family: $font-family1;
+    font-size: $font-lg;
+    
+}
+
+@mixin subNameStyle {
+    color: $color-seconary;
+    font-size: $font-md;
+    font-family: $font-family2;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+}
+
+@mixin backgroundColor {
+    color: $color-teritary;
+    
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body{
+    text-align: center;
+    overflow-x: hidden;
+}
+
+
+
+
+.main-heading{
+    @include headerStyle();
+}
+
+.main-name{
+    @include mainNameStyle()
+}
+
+.sub-name, .sub-heading {
+    @include subNameStyle()
+
+}
+
+
+.stars{
+    color: $color-primary;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.description{
+    color: $color-seconary;
+    font-style: italic;
+    font-family: $font-family2;
+}
+
